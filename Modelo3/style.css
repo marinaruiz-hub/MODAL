@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    background-image:linear-gradient(rgba(50, 0, 40, 0.35), rgba(50, 0, 40, 0.35)), url(assets/download\ \(2\).jpg);
+    color: #21152D
+    min-height: 100vh;
+}
+ 
+header{
+    text-align: center;
+    padding: 40px 20px 25px;
+}
+ 
+header h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+header p{
+    color: #ffffffa7;
+    font-size: 18px;
+}
+ 
+.filtros{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 24px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+ 
+.filtro{
+    padding: 12px 24px;
+    border: 1px solid #d1d3db;
+    border-radius: 25px;
+ 
+    background-color: #21152d7a;
+    color: #fff;
+ 
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+ 
+.filtro.ativo{
+    background-color: #f52d9190;
+    color: #fff;
+}
+ 
+.total{
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+ 
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 150px;
+    grid-auto-flow: dense;
+    gap: 15px;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+ 
+.miniatura{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+ 
+.miniatura:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+ 
+.miniatura:focus-visible{
+    outline: 3px solid #2563eb;
+}
+ 
+.destaque{
+    grid-column: span 3;
+    grid-row: span 2;
+}
+ 
+.horizontal{
+    grid-column: span 2;
+}
+ 
+.vertical{
+    grid-row: span 2;
+}
+
+/*imagens ocultas pelo filtro*/
+.miniatura.oculta{
+    display: none;
+}
+ 
+/*modal*/
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: #222;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 70px;
+}
+ 
+.modal.ativo{
+    display: flex;
+}
+ 
+.modal-conteudo{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    animation: aparecer 0.3 ease;
+}
+ 
+/*animação modal*/
+@keyframes aparecer {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-conteudo img{
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.legenda{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px;
+    background-color: black;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size: 16px;
+}
+
+.fechar{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.fechar:hover{
+    color: #ff5555;
+}
+
+.navegacao{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    border: none;
+    background-color: #545353;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navegacao:hover{
+    border-color: #545353;
+}
+
+.anterior{
+    left: 15px;
+}
+
+.proximo{
+    right: 15px;
+}
+ 

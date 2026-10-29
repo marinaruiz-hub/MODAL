@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+ 
+</head>
+<body>
+    <header>
+        <h1>
+            Monstros SA
+        </h1>
+    </header>
+    <main class="galeria">
+            <img src="assets/Oozmakappa.jpg" alt="Oozmakappa" class="miniatura grande" tabindex="0">
+            <img src="assets/GrupoTodo.jpg" alt="Dupla" class="miniatura horizontal" tabindex="0">
+            <img src="assets/Mike.jpg" alt="Mike Wazowski" class="miniatura" tabindex="0">
+            <img src="assets/Sullivan.jpg" alt="Sullivan" class="miniatura" tabindex="0">
+            <img src="assets/Migos.jpg" alt="Carteirinha" class="miniatura" tabindex="0">
+            <img src="assets/Fuga.jpg" alt="Fuga" class="miniatura horizontal" tabindex="0">
+            <img src="assets/ok.jpg" alt="OK" class="miniatura" tabindex="0">
+    </main>
+ 
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Visualizador De Imagem" aria-hidden="true">
+        <button id="fechar" class="fechar" aria-label="Fechar Imagem">
+            &times;
+        </button>
+ 
+        <button id="anterior" class="navegação anterior" aria-label="Imagem anterior">
+            &#10094;
+        </button>
+ 
+        <div class="modal-conteudo">
+            <img src="" alt="" id="ImagemModal">
+            <div class="legenda">
+                <span id="contador"></span>
+                <span id="nomeImagem"></span>
+            </div>
+        </div>
+ 
+        <button id="proximo" class="navegaçao proximo" aria-label="Proxima imagem">
+            &#10095;
+        </button>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

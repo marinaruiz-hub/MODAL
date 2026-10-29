@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Mosaico</title>
+    <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Monster High</h1>
+        <p>Explore nossas imagens por categoria</p>
+    </header>
+
+    <!--Filtros-->
+    <nav class="filtros">
+        <button class="filtro ativo" data-filtro="todas">
+            Todas
+        </button>
+
+        <button class="filtro" data-filtro="monster hight">
+            Monsters
+        </button>
+
+        <button class="filtro" data-filtro="My Little Pony">
+            Escola
+        </button>
+
+        <button class="filtro" data-filtro="winx">
+            Aleatorio
+        </button>
+    </nav>
+
+    <p id="totalImagens" class="total"></p>
+
+    <!--Galeria-->
+    <main class="galeria">
+        <img src="assets/principal.jpg" alt="Monster High" class="miniatura destaque" data-categoria="Monsters" tabindex="0">
+     
+        <img src="assets/Draculaura.jpg" alt="Draculaura" class="miniatura" data-categoria="Monsters" tabindex="0">
+      
+        <img src="assets/cleo.jpg" alt="Cleo" class="miniatura" data-categoria="Monsters" tabindex="0">
+   
+        <img src="assets/Logo.jpg" alt="Logo" class="miniatura horizontal" data-categoria="Aleatorio" tabindex="0">
+ 
+        <img src="assets/Frankie Stein.jpg" alt="Frankie Stein" class="miniatura" data-categoria="Monsters" tabindex="0">
+
+        <img src="assets/Pelo.jpg" alt="Pelagem" class="miniatura vertical" data-categoria="Aleatorio" tabindex="0">
+
+        <img src="assets/Armario.jpg" alt="Armario" class="miniatura horizontal" data-categoria="Escola" tabindex="0">
+
+        <img src="assets/Escola.jpg" alt="Escola" class="miniatura vertical" data-categoria="Escola" tabindex="0">
+
+        <img src="assets/Faixa.jpg" alt="Faixa" class="miniatura horizontal" data-categoria="Aleatorio" tabindex="0">
+
+        <img src="assets/clawdeen.jpg" alt="Clawdeen" class="miniatura" data-categoria="Monsters" tabindex="0">
+
+       
+    </main>
+
+    <div id="modal" class="modal">
+        <button id="fechar" class="fechar">&times;</button>
+        <button id="anterior" class="navegacao anterior">&#10094</button>
+        <div class="modal-conteudo">
+            <img src="" alt="Imagem Ampliada" id="imagemModal">
+            <div class="legenda">
+                <span id="contador"></span>
+                <span id="nomeImagem"></span>
+            </div>
+        </div>
+        <button id="proximo" class="navegacao proximo">&#10095;</button>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
